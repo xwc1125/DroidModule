@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <paths>
+
+        <!-- <files-path> 分享app内部的存储； -->
+        <!-- <external-path> 分享外部的存储； -->
+        <!-- <cache-path> 分享内部缓存目录。(我遇到的就是分享的缓存) -->
+        <external-path name="external_storage_root" path="/" />
+        <!-- root-path解决了访问 -->
+        <root-path name="external_storage_root" path="/" />
+    </paths>
+
+</resources>

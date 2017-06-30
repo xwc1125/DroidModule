@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/toolbar_r_img"
+        android:icon="@drawable/icon_cucctv"
+        android:title="分享"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group>
+                <item
+
+                    android:id="@+id/action_switch"
+                    android:icon="@drawable/icon_cucctv"
+                    android:title="Fragment Toolbar"
+                    app:showAsAction="withText" />
+                <item
+                    android:id="@+id/action_get"
+                    android:icon="@drawable/icon_cucctv"
+                    android:title="收款码"
+                    app:showAsAction="withText" />
+
+                <item
+                    android:id="@+id/action_new"
+                    android:icon="@drawable/icon_cucctv"
+                    android:title="创建账户"
+                    app:showAsAction="withText" />
+            </group>
+        </menu>
+
+    </item>
+</menu>
