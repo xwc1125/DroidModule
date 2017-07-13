@@ -1,1 +1,1 @@
-include ':app', ':DroidUtils', ':DroidUI'
+include ':DroidApp', ':DroidUtils', ':DroidUI', ':DroidModuleLib'

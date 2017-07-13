@@ -1,0 +1,17 @@
+<resources>
+
+    <!--溢出菜单样式 -->
+    <style name="OverflowMenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+        <item name="android:dropDownWidth">150dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:popupBackground">@drawable/public_toolbar_menu</item>
+        <item name="android:dropDownVerticalOffset">0dip</item>
+        <item name="android:dropDownHorizontalOffset">-5dip</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/base_gray_666</item>
+    </style>
+
+    <color name="color_toolbar_left_msg">#000000</color>
+    <color name="color_toolbar_left_sub_msg">#000000</color>
+</resources>

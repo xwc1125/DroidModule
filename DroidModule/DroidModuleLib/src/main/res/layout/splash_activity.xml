@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/base_gray_bg">
+
+    <ImageView
+        android:id="@+id/splash_img"
+        android:layout_width="@dimen/dp_240"
+        android:layout_height="@dimen/dp_240"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:paddingBottom="80.0dip"
+        android:src="@drawable/splash_icon" />
+
+    <LinearLayout
+        android:id="@+id/bottomIndex_splash"
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dip"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="20.0dip"
+        android:gravity="bottom|center"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/copyright_information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dip"
+        android:gravity="center"
+        android:text="@string/copyright"
+        android:textColor="@color/base_gray_999"
+        android:textSize="12.0sp" />
+
+    <ImageView
+        android:id="@+id/img_start_ad"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/skip_ad_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16.0dip"
+        android:background="@drawable/splash_ad_time_count_bg"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="12.0dip"
+        android:paddingRight="12.0dip"
+        android:paddingTop="5.0dip"
+        android:textColor="#fff"
+        android:textSize="18.0sp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bb519f64-15d9-4338-955d-80713e9f5d82" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/GoogleAuthenticator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/GoogleAuthenticatorConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/GoogleAuthenticatorException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/GoogleAuthenticatorKey.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/GoogleAuthenticatorQRGenerator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/ICredentialRepository.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/IGoogleAuthenticator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/KeyRepresentation.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/ReseedingSecureRandom.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/test/CredentialRepositoryMock.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/test/GoogleAuthTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/test/java/com/xwc1125/driodutils/googleauthtic/test/GoogleAuthenticatorQRGeneratorTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/build.gradle" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/proguard-rules.pro" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/androidTest/java/com/xwc1125/droidmodule/ExampleInstrumentedTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/androidTest/java/com/xwc1125/yuancy_app/ExampleInstrumentedTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/MaterialDesgin/Actor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/MaterialDesgin/DetailActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/MaterialDesgin/MaterialDesginActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/MaterialDesgin/MaterialDesginAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/MaterialDesgin/MyRecyclerViewActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/MaterialDesgin/MyRecyclerViewAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/CaptureActivityHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/DecodeCompeletLinstener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/DecodeManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/EncodeManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/OnScannerCompletionListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/camera/AutoFocusManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/camera/CameraConfigurationManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/camera/CameraConfigurationUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/camera/CameraManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/camera/OpenCameraInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/camera/PreviewCallback.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/common/BeepManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/common/FlashLightManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/common/Runnable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/config/QRConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/decode/DecodeHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/decode/DecodeThread.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/decode/QRDecode.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/utils/QRUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/view/ViewfinderResultPointCallback.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/qr/view/ViewfinderView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/recycler/Item.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/recycler/MyItemClickListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/recycler/MyItemLongClickListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/recycler/MyRecyclerActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/recycler/MyRecyclerAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/recycler/MyRecyclerViewHolder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/recycler/MyRecylerDecoration.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/toolbar/ToolbarHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/webview/Html5Linstener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/webview/Html5WebChromeClient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/webview/Html5WebView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/webview/Html5WebViewClient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/ui/webview/Html5WebViewUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/HomeActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/application/MyApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/base/BaseActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/base/BaseFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/material_design/MeterialDesignFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/material_design/MyMeterialDesignRecyclerViewAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/material_design/cardview/CardViewFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/material_design/dummy/DummyContent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/qr/QRFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/recycler/MyRecyclerAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/recycler/RecyclerActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/recycler/RecyclerFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/recycler/SectionDecoration.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/recycler/adapter/MyRecyclerRecyclerViewAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/recycler/bean/NameBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/recycler/bean/WaitMVBean.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/recycler/dummy/DummyContent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/toolbar/ToolbarActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/toolbar/ToolbarFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/toolbar/ToolbarFragmentActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/utils/Install_APK_Fragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/xwc1125/yuancy_app/webview/WebViewFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/DBApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/DbManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/CursorUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/DBConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/DbManagerImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/DbModelSelector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/Exception/DbException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/Selector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/annotation/Column.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/annotation/Table.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/BooleanColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/ByteArrayColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/ByteColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/CharColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/ColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/ColumnConverterFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/DateColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/DoubleColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/FloatColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/IntegerColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/LongColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/ShortColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/SqlDateColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/converter/StringColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/sqlite/ColumnDbType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/sqlite/SqlInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/sqlite/SqlInfoBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/sqlite/WhereBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/table/ColumnEntity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/table/ColumnUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/table/DbBase.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/table/DbModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/table/TableEntity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/table/TableUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/utils/IoUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/db/db/utils/KeyValue.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/helper/HandlerListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/helper/WeakHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/HttpCache.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/HttpConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/HttpHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/HttpRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/RequestCallback.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/cache/KeyExpiryMap.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/cache/LruCache.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/entity/RequestInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/entity/ResponseInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/handler/ByteArrayDownloadHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/handler/FileDownloadHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/handler/RequestCallBackHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/handler/StringDownloadHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/task/Priority.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/task/PriorityAsyncTask.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/task/PriorityExecutor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/task/PriorityObject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/task/PriorityObjectBlockingQueue.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/task/PriorityRunnable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/task/TaskHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/http/utils/InnerHttpUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/log/LogUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/log/impl/InnerLoggerUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/log/impl/LogLevel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/log/impl/Logger.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/log/impl/LoggerPrinter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/log/impl/Printer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/log/impl/Settings.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/utils/app/PackageUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/utils/io/FileUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/com/yuancy/framework/utils/string/StringUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/DbManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/HttpManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/ImageManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/ViewInjector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/cache/DiskCacheEntity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/cache/DiskCacheFile.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/cache/LruCache.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/cache/LruDiskCache.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/Callback.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/TaskController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/task/AbsTask.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/task/Priority.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/task/PriorityExecutor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/task/PriorityRunnable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/task/TaskControllerImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/task/TaskProxy.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/util/DensityUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/util/DoubleKeyValueMap.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/util/FileUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/util/IOUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/util/KeyValue.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/util/LogUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/util/MD5.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/util/ParameterizedTypeUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/common/util/ProcessLock.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/config/DbConfigs.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/CursorUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/DbManagerImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/DbModelSelector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/Selector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/annotation/Column.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/annotation/Table.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/BooleanColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/ByteArrayColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/ByteColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/CharColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/ColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/ColumnConverterFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/DateColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/DoubleColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/FloatColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/IntegerColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/LongColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/ShortColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/SqlDateColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/converter/StringColumnConverter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/sqlite/ColumnDbType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/sqlite/SqlInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/sqlite/SqlInfoBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/sqlite/WhereBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/table/ColumnEntity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/table/ColumnUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/table/DbBase.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/table/DbModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/table/TableEntity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/db/table/TableUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/ex/BaseException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/ex/DbException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/ex/FileLockedException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/ex/HttpException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/ex/HttpRedirectException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/BaseParams.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/HttpManagerImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/HttpMethod.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/HttpTask.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/ProgressHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/RequestParams.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/RequestParamsHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/RequestTrackerWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/annotation/HttpRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/annotation/HttpResponse.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/app/DefaultParamsBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/app/HttpRetryHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/app/InputStreamResponseParser.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/app/ParamsBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/app/RedirectHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/app/RequestInterceptListener.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/app/RequestTracker.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/app/ResponseParser.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/body/BodyItemWrapper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/body/FileBody.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/body/InputStreamBody.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/body/MultipartBody.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/body/ProgressBody.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/body/RequestBody.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/body/StringBody.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/body/UrlEncodedParamsBody.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/cookie/CookieEntity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/cookie/DbCookieStore.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/loader/BooleanLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/loader/ByteArrayLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/loader/FileLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/loader/IntegerLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/loader/JSONArrayLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/loader/JSONObjectLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/loader/Loader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/loader/LoaderFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/loader/ObjectLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/loader/StringLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/request/AssetsRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/request/HttpRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/request/LocalFileRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/request/UriRequest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/http/request/UriRequestFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/image/AsyncDrawable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/image/GifDrawable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/image/ImageAnimationHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/image/ImageDecoder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/image/ImageLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/image/ImageManagerImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/image/ImageOptions.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/image/MemCacheKey.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/image/ReusableBitmapDrawable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/image/ReusableDrawable.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/view/EventListenerManager.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/view/ViewFinder.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/view/ViewInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/view/ViewInjectorImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/view/annotation/ContentView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/view/annotation/Event.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/view/annotation/ViewInject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/java/org/xutils/x.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/icon_back.9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p1.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p1_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p1_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p1_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p2_1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p2_2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p2_3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-hdpi/p7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-v21/ic_menu_camera.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-v21/ic_menu_gallery.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-v21/ic_menu_manage.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-v21/ic_menu_send.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-v21/ic_menu_share.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable-v21/ic_menu_slideshow.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable/icon_cucctv.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable/materialdesgin_oval.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable/recycler_demo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/drawable/side_nav_bar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/activity_home.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/activity_materialdesgin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/activity_recycler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/activity_recycler2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/activity_toolbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/activity_toolbar_fragment.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/app_bar_home.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/content_home.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/example_fragment_card_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/example_fragment_install_apk.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/example_fragment_qr.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/example_fragment_web_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/fragment_meterialdesign.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/fragment_meterialdesign_list.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/fragment_recycler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/fragment_recycler_list.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/fragment_toolbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/item_recycler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/materialdesgin_card_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/materialdesgin_detail_layout.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/materialdesgin_recycler_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/myrecycler_item.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/nav_header_home.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/layout/public_toolbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/menu/activity_home_drawer.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/menu/menu_home_setting.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/menu/menu_materialdesgin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/menu/menu_toolbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/raw/beep.ogg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/values/drawables.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/main/res/xml/file_paths.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DroidModule/app/src/test/java/com/xwc1125/droidmodule/ExampleUnitTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DroidModule/DroidUI/build.gradle" afterPath="$PROJECT_DIR$/DroidModule/DroidUI/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DroidModule/DroidUI/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/DroidModule/DroidUI/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/build.gradle" afterPath="$PROJECT_DIR$/DroidModule/DroidUtils/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DroidModule/DroidUtils/src/main/java/com/xwc1125/droidutils/StringUtils.java" afterPath="$PROJECT_DIR$/DroidModule/DroidUtils/src/main/java/com/xwc1125/droidutils/StringUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DroidModule/build.gradle" afterPath="$PROJECT_DIR$/DroidModule/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DroidModule/settings.gradle" afterPath="$PROJECT_DIR$/DroidModule/settings.gradle" />
+    </list>
+    <ignored path="DroidModule.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="DroidModule" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="373" />
+    <option name="y" value="23" />
+    <option name="width" value="1307" />
+    <option name="height" value="958" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DroidModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DroidModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DroidModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DroidModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DroidModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DroidModule" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb519f64-15d9-4338-955d-80713e9f5d82" name="Default" comment="" />
+      <created>1499853014057</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1499853014057</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="373" y="23" width="1307" height="958" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2496112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>

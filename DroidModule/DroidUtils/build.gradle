@@ -29,6 +29,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     testCompile files('libs/java-json.jar')
 
-    compile 'org.apache.httpcomponents:httpclient:4.4.1'
     compile 'commons-codec:commons-codec:1.10'
 }

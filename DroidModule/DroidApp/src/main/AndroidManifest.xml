@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xwc1125.droidapp">
+
+    <!-- 访问网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 写SDK权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--二维码-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+
+    <application
+        android:name="com.xwc1125.yuancy_app.application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.xwc1125.ui.recycler.MyRecyclerActivity2"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Toolbar -->
+        <activity android:name="com.xwc1125.yuancy_app.toolbar.ToolbarActivity" />
+        <activity android:name="com.xwc1125.yuancy_app.toolbar.ToolbarFragmentActivity"/>
+
+        <!--MaterialDesgin-->
+        <activity android:name="com.xwc1125.ui.MaterialDesgin.MyRecyclerViewActivity" />
+        <activity android:name="com.xwc1125.ui.MaterialDesgin.MaterialDesginActivity" />
+        <activity android:name="com.xwc1125.ui.MaterialDesgin.DetailActivity" />
+        <!--<activity android:name="com.xwc1125.ui.recycler.MyRecyclerActivity" />-->
+        <activity android:name="com.xwc1125.yuancy_app.recycler.RecyclerActivity" />
+
+        <!-- android7.0后安装apk的配置（android:authorities="包名.fileProvider"）,同时需要配置res/xml/filepaths.xml -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <!-- android7.0后安装apk的配置（android:authorities="包名.fileProvider"）,同时需要配置res/xml/filepaths.xml -->
+
+    </application>
+
+</manifest>

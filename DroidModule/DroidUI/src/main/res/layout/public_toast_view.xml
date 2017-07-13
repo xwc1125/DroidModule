@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/public_toast_view_bg">
+
+    <!-- 撑开布局 -->
+
+    <!-- <View
+         android:layout_width="@dimen/x87"
+         android:layout_height="@dimen/y206"
+         android:layout_centerInParent="true" /> -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/tips_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10.0dip"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <com.xwc1125.droidui.language.AppTextView
+            android:id="@+id/tips_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lineSpacingExtra="3.0dip"
+            android:text="验证码已发送"
+            android:textColor="#dedede"
+            android:textSize="17.0sp" />
+    </LinearLayout>
+
+</RelativeLayout>

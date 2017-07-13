@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="submit" msgid="1518558163262431303">"保存"</string>
+    <string name="cancel" msgid="5705561042616477184">"取消"</string>
+    <string name="ok" msgid="6406800116409689723">"确定"</string>
+    <string name="sdcard_error">SD卡无法加载</string>
+</resources>
