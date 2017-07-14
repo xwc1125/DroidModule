@@ -4,12 +4,14 @@ import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.Toolbar;
 
+import com.xwc1125.droidutils.view.FindViewUtils;
+
 public class ToolbarHelper {
 
     private Toolbar mToolbar = null;
 
     public ToolbarHelper(Activity activity, int resId) {
-        mToolbar = (Toolbar) activity.findViewById(resId);
+        mToolbar = FindViewUtils.findViewById(activity, resId);
     }
 
     public Toolbar getToolbar() {

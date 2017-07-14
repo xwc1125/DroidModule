@@ -24,7 +24,10 @@ public class Html5WebViewClient extends WebViewClient {
     private static final String TAG = Html5WebViewClient.class.getName();
     private Html5Linstener linstener;
 
-    public Html5WebViewClient(Html5Linstener linstener) {
+    public Html5WebViewClient() {
+    }
+
+    public void setLinstener(Html5Linstener linstener) {
         this.linstener = linstener;
     }
 
@@ -118,6 +121,14 @@ public class Html5WebViewClient extends WebViewClient {
         super.onScaleChanged(view, oldScale, newScale);
         if (newScale - oldScale > 7) {
             view.setInitialScale((int) (oldScale / newScale * 100)); //异常放大，缩回去。
+        }
+    }
+
+    @Override
+    public void onPageCommitVisible(WebView view, String url) {
+        super.onPageCommitVisible(view, url);
+        if (linstener != null) {
+            linstener.hindProgressBar();
         }
     }
 

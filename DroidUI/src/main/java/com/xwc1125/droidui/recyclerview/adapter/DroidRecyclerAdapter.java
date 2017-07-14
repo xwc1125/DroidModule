@@ -1,19 +1,21 @@
 package com.xwc1125.droidui.recyclerview.adapter;
 
-import android.app.Activity;
-import android.content.Context;
+import android.database.DataSetObservable;
+import android.database.DataSetObserver;
+import android.support.annotation.LayoutRes;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ListAdapter;
 
-import com.xwc1125.droidui.R;
 import com.xwc1125.droidui.recyclerview.listener.DroidItemClickListener;
 import com.xwc1125.droidui.recyclerview.listener.DroidItemLongClickListener;
 import com.xwc1125.droidui.recyclerview.listener.DroidRecyclerBindViewListener;
 import com.xwc1125.droidui.recyclerview.viewholder.DroidRecyclerViewHolder;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -22,27 +24,44 @@ import java.util.List;
  * Created by xwc1125 on 2017/4/27.
  */
 
-public class DroidRecyclerAdapter<T> extends RecyclerView.Adapter<DroidRecyclerViewHolder> {
-    private Context context;
-    private List<T> list;
-    private DroidItemClickListener mItemClickListener;
-    private DroidItemLongClickListener mItemLongClickListener;
-    private int itemLayoutResId;
-    private DroidRecyclerBindViewListener bindViewListener;
+public class DroidRecyclerAdapter<T> extends RecyclerView.Adapter<DroidRecyclerViewHolder>
+        implements ListAdapter {
+    private List<T> list;//数据
+    private DroidItemClickListener mItemClickListener;//点击事件
+    private DroidItemLongClickListener mItemLongClickListener;//长按事件
+    private int itemLayoutResId;//item的layout布局
+    private DroidRecyclerBindViewListener bindViewListener;//控件绑定的回调
 
-//    public static final int TYPE_HEADER = 0;  //说明是带有Header的
-//    public static final int TYPE_FOOTER = 1;  //说明是带有Footer的
-//    public static final int TYPE_NORMAL = 2;  //说明是不带有header和footer的
-//
-//    private View headerView;
-//    private View footerView;
+    private final DataSetObservable mDataSetObservable = new DataSetObservable();
 
     /**
      * 初始化适配器
      *
-     * @param context
-     * @param list             显示的对象list
-     * @param itemLayoutResId  item的layout布局【R.layout.itemlayout】
+     * @param layoutId item的layout布局【R.layout.itemlayout】
+     */
+    public DroidRecyclerAdapter(@LayoutRes int layoutId) {
+        setHasStableIds(false);
+        this.list = new ArrayList<>();
+        this.itemLayoutResId = layoutId;
+    }
+
+    /**
+     * 初始化适配器
+     *
+     * @param collection 显示的对象list
+     * @param layoutId   item的layout布局【R.layout.itemlayout】
+     */
+    public DroidRecyclerAdapter(Collection<T> collection, @LayoutRes int layoutId) {
+        setHasStableIds(false);
+        this.list = new ArrayList<>(collection);
+        this.itemLayoutResId = layoutId;
+    }
+
+    /**
+     * 初始化适配器
+     *
+     * @param collection       显示的对象list
+     * @param layoutId         item的layout布局【R.layout.itemlayout】
      * @param bindViewListener 绑定view<br>
      *                         Item item = (Item) list.get(position);<br>
      *                         TextView text1 = (TextView) itemView.findViewById(R.id.text);<br>
@@ -50,11 +69,46 @@ public class DroidRecyclerAdapter<T> extends RecyclerView.Adapter<DroidRecyclerV
      *                         ImageView img = (ImageView) itemView.findViewById(R.id.img);<br>
      *                         img.setImageResource(item.imgId);<br>
      */
-    public DroidRecyclerAdapter(Context context, List<T> list, int itemLayoutResId, DroidRecyclerBindViewListener bindViewListener) {
-        this.context = context;
-        this.list = list;
-        this.itemLayoutResId = itemLayoutResId;
+    public DroidRecyclerAdapter(Collection<T> collection, @LayoutRes int layoutId,
+                                DroidRecyclerBindViewListener bindViewListener) {
+        setHasStableIds(false);
+        this.list = new ArrayList<>(collection);
+        this.itemLayoutResId = layoutId;
         this.bindViewListener = bindViewListener;
+    }
+
+    @Override
+    public void registerDataSetObserver(DataSetObserver observer) {
+        mDataSetObservable.registerObserver(observer);
+    }
+
+    @Override
+    public void unregisterDataSetObserver(DataSetObserver observer) {
+        mDataSetObservable.unregisterObserver(observer);
+    }
+
+    @Override
+    public int getCount() {
+        return 0;
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return list.get(position);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        DroidRecyclerViewHolder holder;
+        if (convertView != null) {
+            holder = (DroidRecyclerViewHolder) convertView.getTag();
+        } else {
+            holder = onCreateViewHolder(parent, getItemViewType(position));
+            convertView = holder.itemView;
+            convertView.setTag(holder);
+        }
+        onBindViewHolder(holder, position);
+        return convertView;
     }
 
     /**
@@ -62,31 +116,23 @@ public class DroidRecyclerAdapter<T> extends RecyclerView.Adapter<DroidRecyclerV
      */
     @Override
     public int getItemViewType(int position) {
-//        if (headerView == null && footerView == null) {
-//            return TYPE_NORMAL;
-//        }
-//        if (position == 0) {
-//            //第一个item应该加载Header
-//            return TYPE_HEADER;
-//        }
-//        if (position == getItemCount() - 1) {
-//            //最后一个,应该加载Footer
-//            return TYPE_FOOTER;
-//        }
-//        return TYPE_NORMAL;
         return 0;
     }
 
     @Override
+    public int getViewTypeCount() {
+        return 1;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return getCount() == 0;
+    }
+
+    @Override
     public DroidRecyclerViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-//        if (headerView != null && viewType == TYPE_HEADER) {
-//            return new DroidRecyclerViewHolder(headerView);
-//        }
-//        if (footerView != null && viewType == TYPE_FOOTER) {
-//            return new DroidRecyclerViewHolder(footerView);
-//        }
         //绑定一个UI作为Holder 提高性能
-        View v = LayoutInflater.from(context).inflate(itemLayoutResId, parent, false);//必须加上 parent,false，否则只是显示部分
+        View v = LayoutInflater.from(parent.getContext()).inflate(itemLayoutResId, parent, false);//必须加上 parent,false，否则只是显示部分
         DroidRecyclerViewHolder holder = new DroidRecyclerViewHolder(v, mItemClickListener, mItemLongClickListener);
         return holder;
     }
@@ -94,23 +140,6 @@ public class DroidRecyclerAdapter<T> extends RecyclerView.Adapter<DroidRecyclerV
     //绑定View，这里是根据返回的这个position的类型，从而进行绑定的，   HeaderView和FooterView, 就不同绑定了
     @Override
     public void onBindViewHolder(DroidRecyclerViewHolder holder, int position) {
-//        if (getItemViewType(position) == TYPE_NORMAL) {
-////            if (holder instanceof DroidRecyclerViewHolder) {
-////                //这里加载数据的时候要注意，是从position-1开始，因为position==0已经被header占用了
-//////                ((DroidRecyclerViewHolder) holder).tv.setText(list.get(position - 1));
-////                return;
-////            }
-//            //设置数据
-//            if (bindViewListener != null) {
-//                bindViewListener.onBindViewHolder(holder, holder.itemView, list, position-1);
-//            }
-//            return;
-//        } else if (getItemViewType(position) == TYPE_HEADER) {
-//            return;
-//        }else {
-//            return;
-//        }
-
         //设置数据
         if (bindViewListener != null) {
             bindViewListener.onBindViewHolder(holder, holder.itemView, list, position);
@@ -118,19 +147,11 @@ public class DroidRecyclerAdapter<T> extends RecyclerView.Adapter<DroidRecyclerV
         return;
     }
 
-    //返回View中Item的个数，这个时候，总的个数应该是ListView中Item的个数加上HeaderView和FooterView
+    /**
+     * 返回View中Item的个数
+     */
     @Override
     public int getItemCount() {
-//        if (headerView == null && footerView == null) {
-//            return list.size();
-//        } else if (headerView == null && footerView != null) {
-//            return list.size() + 1;
-//        } else if (headerView != null && footerView == null) {
-//            return list.size() + 1;
-//        } else {
-//            return list.size() + 2;
-//        }
-
         return list.size();
     }
 
@@ -152,22 +173,117 @@ public class DroidRecyclerAdapter<T> extends RecyclerView.Adapter<DroidRecyclerV
         this.mItemLongClickListener = listener;
     }
 
-//    public View getHeaderView() {
-//        return headerView;
-//    }
-//
-//    public void setHeaderView(View headerView) {
-//        this.headerView = headerView;
-//        notifyItemInserted(0);
-//    }
-//
-//    public View getFooterView() {
-//        return footerView;
-//    }
-//
-//    public void setFooterView(View footerView) {
-//        this.footerView = footerView;
-//        notifyItemInserted(getItemCount());
-//    }
+    /**
+     * 刷新数据（原有数据清除后，重新负值）
+     *
+     * @param collection
+     */
+    public void refresh(Collection<T> collection) {
+        list.clear();
+        list.addAll(collection);
+        notifyDataSetChanged();
+        notifyListDataSetChanged();
+    }
 
+    /**
+     * 刷新数据（刷新指定位置的数据）
+     *
+     * @param position
+     * @param data
+     */
+    public void refresh(int position, T data) {
+        list.remove(position);
+        list.add(position, data);
+        notifyDataSetChanged();
+        notifyListDataSetChanged();
+    }
+
+    /**
+     * 添加数据（在原有数据前添加数据）
+     *
+     * @param collection
+     */
+    public void add(Collection<T> collection) {
+        collection.addAll(list);
+        list.clear();
+        list.addAll(collection);
+        notifyDataSetChanged();
+        notifyListDataSetChanged();
+    }
+
+    /**
+     * 添加数据（指定位置添加数据）
+     *
+     * @param position
+     * @param data
+     */
+    public void add(int position, T data) {
+        list.add(position, data);
+        notifyItemInserted(position);
+        notifyDataSetChanged();
+        notifyListDataSetChanged();
+    }
+
+    /**
+     * 添加数据（在原数据前加一条数据）
+     *
+     * @param data
+     */
+    public void add(T data) {
+        list.add(0, data);
+        notifyDataSetChanged();
+        notifyListDataSetChanged();
+    }
+
+    /**
+     * 加载更多（在原数据后添加数据）
+     *
+     * @param collection
+     */
+    public void loadmore(Collection<T> collection) {
+        list.addAll(collection);
+        notifyDataSetChanged();
+        notifyListDataSetChanged();
+    }
+
+    /**
+     * 加载更多（在原数据后添加一条数据）
+     *
+     * @param newData
+     */
+    public void loadmore(T newData) {
+        list.add(newData);
+        notifyDataSetChanged();
+        notifyListDataSetChanged();
+    }
+
+    /**
+     * 移除数据（移除指定位置的数据）
+     *
+     * @param position
+     */
+    public void remove(int position) {
+        list.remove(position);
+        notifyItemRemoved(position);
+        notifyDataSetChanged();
+        notifyListDataSetChanged();
+    }
+
+    public void notifyListDataSetChanged() {
+        mDataSetObservable.notifyChanged();
+    }
+
+    public void notifyDataSetInvalidated() {
+        mDataSetObservable.notifyInvalidated();
+    }
+
+    @Override
+    public boolean areAllItemsEnabled() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled(int position) {
+        return true;
+    }
 }

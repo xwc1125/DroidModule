@@ -34,8 +34,11 @@ public class Html5WebChromeClient extends WebChromeClient {
     private Context mContext;
     private Html5Linstener linstener;
 
-    public Html5WebChromeClient(Context context, WebView webView, Html5Linstener linstener) {
+    public Html5WebChromeClient(Context context, WebView webView) {
         this.mContext = context;
+    }
+
+    public void setLinstener(Html5Linstener linstener) {
         this.linstener = linstener;
     }
 

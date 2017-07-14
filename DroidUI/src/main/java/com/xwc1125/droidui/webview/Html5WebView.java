@@ -70,9 +70,9 @@ public class Html5WebView extends WebView {
         // 与js交互
         this.addJavascriptInterface(linstener, "injectedObject");
 
-        html5WebChromeClient = new Html5WebChromeClient(mContext, this, linstener);
+        html5WebChromeClient = new Html5WebChromeClient(mContext, this);
         this.setWebChromeClient(html5WebChromeClient);
-        html5WebViewClient = new Html5WebViewClient(linstener);
+        html5WebViewClient = new Html5WebViewClient();
         this.setWebViewClient(html5WebViewClient);
     }
 
@@ -91,16 +91,22 @@ public class Html5WebView extends WebView {
 
     public void setLinstener(Html5Linstener linstener) {
         this.linstener = linstener;
+        html5WebChromeClient.setLinstener(linstener);
+        html5WebViewClient.setLinstener(linstener);
     }
 
     public void loadUrl(String url, Map<String, String> additionalHttpHeaders, Html5Linstener linstener) {
         super.loadUrl(url, additionalHttpHeaders);
         this.linstener = linstener;
+        html5WebChromeClient.setLinstener(linstener);
+        html5WebViewClient.setLinstener(linstener);
     }
 
     public void loadUrl(String url, Html5Linstener linstener) {
         super.loadUrl(url);
         this.linstener = linstener;
+        html5WebChromeClient.setLinstener(linstener);
+        html5WebViewClient.setLinstener(linstener);
     }
 
 

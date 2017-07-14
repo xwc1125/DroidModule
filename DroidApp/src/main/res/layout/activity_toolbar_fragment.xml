@@ -6,7 +6,6 @@
     android:layout_height="match_parent">
 
     <include
-        android:id="@+id/public_top"
         layout="@layout/public_toolbar" />
 
     <FrameLayout

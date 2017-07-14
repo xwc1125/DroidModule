@@ -6,9 +6,7 @@
     android:layout_height="match_parent">
 
     <!-- appbar -->
-    <include
-        android:id="@+id/public_top"
-        layout="@layout/public_toolbar" />
+    <include layout="@layout/public_toolbar" />
 
     <!-- 主题部分 -->
     <include

@@ -23,7 +23,6 @@ import com.xwc1125.droidutils.handler.WeakHandler;
  * @date 2017/6/3  15:29 <br>
  */
 public abstract class BaseAppCompatActivity extends AppCompatActivity {
-    protected WeakHandler handler;
     protected static Activity activity;
     protected static ToolbarHelper toolbarHelper;
     protected FragmentManager fm;

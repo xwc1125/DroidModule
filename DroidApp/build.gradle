@@ -26,7 +26,7 @@ dependencies {
     })
 
     //加载libs下的genius.aar文件
-    //compile(name:'captchalib-release', ext:'aar')
+    //compile(name:'DroidUI-release', ext:'aar')
     //直接使用lib包
     compile project(':DroidModuleLib')
     compile project(':DroidUtils')
@@ -52,4 +52,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     //二维码
     compile 'com.google.zxing:core:3.3.0'
+
+    //=============view下拉刷新上拉加载===============
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.2-alpha-3'
 }

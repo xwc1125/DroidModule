@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,10 +15,14 @@ import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.xwc1125.droidapp.R;
 import com.xwc1125.droidui.webview.Html5Linstener;
 import com.xwc1125.droidui.webview.Html5WebView;
 import com.xwc1125.droidmodule.Base.fragment.BaseFragment;
+import com.xwc1125.droidutils.statubar.StatusBarUtils;
+import com.xwc1125.droidutils.view.FindViewUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -55,19 +60,34 @@ public class WebViewFragment extends BaseFragment {
         return inflater.inflate(R.layout.example_fragment_web_view, container, false);
     }
 
+    static RefreshLayout refreshLayout;
+
     @Override
     protected void initView(View view) {
-        LinearLayout mLayout = (LinearLayout) view.findViewById(R.id.ll_webview);
+        LinearLayout mLayout = FindViewUtils.findViewById(view, R.id.ll_webview);
         //不在xml中定义 Webview ，而是在需要的时候在Activity中创建，并且Context使用 getApplicationgContext()
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
         webView = new Html5WebView(getContext());
         webView.setLayoutParams(params);
         mLayout.addView(webView);
+
+        refreshLayout = FindViewUtils.findViewById(view, R.id.smartLayout);
+        refreshLayout.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh(RefreshLayout refreshlayout) {
+                webView.loadUrl("http://www.baidu.com", DemoHtml5Linstener);
+            }
+        });
+        refreshLayout.autoRefresh();
+
+        //状态栏透明和间距处理
+        StatusBarUtils.immersive(activity);
+        StatusBarUtils.setPaddingSmart(activity, webView);
     }
 
     @Override
     protected void initListeners() {
-        webView.loadUrl("http://www.baidu.com", DemoHtml5Linstener);
+
     }
 
     @Override
@@ -104,6 +124,7 @@ public class WebViewFragment extends BaseFragment {
         @Override
         public void hindProgressBar() {
             super.hindProgressBar();
+            refreshLayout.finishRefresh();
         }
 
         @Override

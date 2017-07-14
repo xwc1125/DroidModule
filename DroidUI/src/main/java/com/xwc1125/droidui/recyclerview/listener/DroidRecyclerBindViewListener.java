@@ -1,5 +1,6 @@
 package com.xwc1125.droidui.recyclerview.listener;
 
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.xwc1125.droidui.recyclerview.viewholder.DroidRecyclerViewHolder;
