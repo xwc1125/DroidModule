@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/transparent"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:theme="@style/Theme.AppCompat.NoActionBar">
+
+            <RelativeLayout
+                android:id="@+id/top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/left_layout"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_left_back"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:padding="@dimen/dp_5"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_back"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/iv_left_back_sub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:padding="@dimen/dp_5"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/icon_back"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view_temp"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/left_layout"
+                    android:background="@color/base_gray_666"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/left_text_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/view_temp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone">
+
+                    <com.xwc1125.droidui.language.AppTextView
+                        android:id="@+id/tv_left_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="左标题"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/sp_18" />
+
+                    <com.xwc1125.droidui.language.AppTextView
+                        android:id="@+id/tv_left_title_sub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="左子标题"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/sp_10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/center_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:id="@+id/center_pb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.xwc1125.droidui.language.AppTextView
+                            android:id="@+id/tv_center_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/view_temp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:text="标题"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/sp_18" />
+
+                        <com.xwc1125.droidui.language.AppTextView
+                            android:id="@+id/tv_center_title_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:text="子标题"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/right_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.xwc1125.droidui.language.AppTextView
+                            android:id="@+id/tv_right_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:text="标题"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/sp_18" />
+
+                        <com.xwc1125.droidui.language.AppTextView
+                            android:id="@+id/tv_right_title_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:text="子标题"
+                            android:textColor="#ffffff"
+                            android:textSize="@dimen/sp_10" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_right_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/public_toolbar_menu"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+</merge>

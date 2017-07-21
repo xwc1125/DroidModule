@@ -14,7 +14,13 @@ import android.webkit.WebView;
  * @date 2017/5/31  09:47 <br>
  */
 public class Html5WebViewUtils {
-    public static void getWebSettings(WebView webView) {
+    /**
+     * 获取默认的配置信息
+     *
+     * @param webView
+     * @return
+     */
+    public static WebSettings getWebSettings(WebView webView) {
         // Configure the webview
         WebSettings ws = webView.getSettings();
 
@@ -73,5 +79,7 @@ public class Html5WebViewUtils {
         }
         /** 设置字体默认缩放大小(改变网页字体大小,setTextSize  api14被弃用)*/
         ws.setTextZoom(100);
+
+        return ws;
     }
 }
