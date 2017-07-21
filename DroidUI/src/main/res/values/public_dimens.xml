@@ -100,12 +100,13 @@
     <dimen name="dp_102">102dp</dimen>
     <dimen name="dp_105">105dp</dimen>
     <dimen name="dp_110">110dp</dimen>
-    <dimen name="dp_120">120dp</dimen>
     <dimen name="dp_117">117dp</dimen>
+    <dimen name="dp_120">120dp</dimen>
     <dimen name="dp_135">135dp</dimen>
     <dimen name="dp_150">150dp</dimen>
     <dimen name="dp_160">160dp</dimen>
     <dimen name="dp_170">170dp</dimen>
+    <dimen name="dp_180">180dp</dimen>
     <dimen name="dp_200">200dp</dimen>
     <dimen name="dp_212">212dp</dimen>
     <dimen name="dp_216">216dp</dimen>
@@ -118,11 +119,9 @@
     <dimen name="dp_300">300dp</dimen>
     <dimen name="dp_320">320dp</dimen>
     <dimen name="dp_350">350dp</dimen>
-    <dimen name="dp_395">395dp</dimen>
-    <dimen name="dp_394">394dp</dimen>
     <dimen name="dp_390">390dp</dimen>
+    <dimen name="dp_395">395dp</dimen>
     <dimen name="dp_400">400dp</dimen>
     <dimen name="dp_450">450dp</dimen>
     <dimen name="dp_500">500dp</dimen>
-    <dimen name="dp_180">180dp</dimen>
 </resources>

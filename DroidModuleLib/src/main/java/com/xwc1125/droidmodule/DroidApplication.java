@@ -13,7 +13,7 @@ import org.xutils.x;
  * @Copyright: Copyright (c) 2017 <br>
  * @date 2017/6/3  14:41 <br>
  */
-public class MyApplication extends Application {
+public class DroidApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();

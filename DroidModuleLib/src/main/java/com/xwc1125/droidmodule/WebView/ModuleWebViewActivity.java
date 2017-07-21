@@ -1,9 +1,7 @@
 package com.xwc1125.droidmodule.WebView;
 
 import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -12,7 +10,7 @@ import android.webkit.WebView;
 
 import com.xwc1125.droidmodule.Base.activity.BaseActivity;
 import com.xwc1125.droidmodule.R;
-import com.xwc1125.droidui.webview.Html5Linstener;
+import com.xwc1125.droidui.webview.interfaces.Html5Listener;
 import com.xwc1125.droidui.webview.Html5WebView;
 import com.xwc1125.droidutils.StringUtils;
 
@@ -62,13 +60,13 @@ public abstract class ModuleWebViewActivity extends BaseActivity {
 
     @Override
     protected void initViews() {
-        setViews(webView,title,url);
+        setViews(webView, title, url);
         if (url.startsWith("file:///android_asset")) {
             webView.getSettings().setTextZoom(240);
         }
     }
 
-    protected abstract void setViews(WebView webView,String title,String url);
+    protected abstract void setViews(WebView webView, String title, String url);
 
     @Override
     protected void initListeners() {
@@ -77,18 +75,19 @@ public abstract class ModuleWebViewActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        Html5Linstener myHtml5Linstener = setHtml5Linstener(activity, webView);
+        Html5Listener myHtml5Linstener = setHtml5Linstener(activity, webView);
         if (myHtml5Linstener == null) {
             myHtml5Linstener = MyHtml5Linstener;
         }
         if (StringUtils.isNotEmpty(url)) {
-            webView.loadUrl(url, myHtml5Linstener);
+            webView.loadUrl(url);
+            webView.setListener(myHtml5Linstener);
         } else {
             activity.finish();
         }
     }
 
-    protected abstract Html5Linstener setHtml5Linstener(Activity activity, WebView webView);
+    protected abstract Html5Listener setHtml5Linstener(Activity activity, WebView webView);
 
     @Override
     protected void onDestroy() {
@@ -103,7 +102,7 @@ public abstract class ModuleWebViewActivity extends BaseActivity {
         super.onDestroy();
     }
 
-    private static Html5Linstener MyHtml5Linstener = new Html5Linstener() {
+    private static Html5Listener MyHtml5Linstener = new Html5Listener() {
         @Override
         public boolean onKeyDown(int keyCode, KeyEvent event) {
             if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -120,67 +119,11 @@ public abstract class ModuleWebViewActivity extends BaseActivity {
             return false;
         }
 
-        @Override
-        public void hindProgressBar() {
-            super.hindProgressBar();
-        }
-
-        @Override
-        public void showWebView() {
-            super.showWebView();
-        }
-
-        @Override
-        public void hindWebView() {
-            super.hindWebView();
-        }
 
         @Override
         public void startProgress() {
             super.startProgress();
         }
 
-        @Override
-        public void onProgressChanged(int newProgress) {
-            super.onProgressChanged(newProgress);
-        }
-
-        @Override
-        public void fullViewAddView(View view) {
-            super.fullViewAddView(view);
-        }
-
-        @Override
-        public void showVideoFullView() {
-            super.showVideoFullView();
-        }
-
-        @Override
-        public void hindVideoFullView() {
-            super.hindVideoFullView();
-        }
-
-        @Override
-        public void loadingUrl(WebView view, String url) {
-            // 电话、短信、邮箱
-            if (url.startsWith(WebView.SCHEME_TEL) || url.startsWith("sms:") || url.startsWith(WebView.SCHEME_MAILTO)) {
-                try {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(url));
-                    activity.startActivity(intent);
-                } catch (ActivityNotFoundException ignored) {
-                }
-            }
-        }
-
-        @Override
-        public void onImageClick(String imgUrl, String hasLink) {
-//            Toast.makeText(activity, "imgUrl被点击了：" + imgUrl, Toast.LENGTH_SHORT).show();
-        }
-
-        @Override
-        public void onTextClick(String type, String item_pk) {
-//            Toast.makeText(activity, "item_pk被点击了：" + item_pk, Toast.LENGTH_SHORT).show();
-        }
     };
 }

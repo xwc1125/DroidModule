@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.xwc1125.droidmodule.Base.activity.BaseAppCompatActivity;
 import com.xwc1125.droidapp.R;
-import com.xwc1125.droidmodule.ToolBar.ToolbarHelper;
+import com.xwc1125.droidui.ToolBar.ToolbarHelper;
 
 /**
  * Class: com.xwc1125.yuancy_app.toolbar <br>
@@ -38,7 +38,7 @@ public class ToolbarActivity extends BaseAppCompatActivity {
 
     @Override
     protected void initViews() {
-        toolbarHelper = new ToolbarHelper(activity, R.id.toolbar);
+        ToolbarHelper toolbarHelper = new ToolbarHelper(activity);
         toolbarHelper.getToolbar().inflateMenu(R.menu.menu_toolbar);
         AppCompatActivity appCompatActivity = (AppCompatActivity) activity;
         ActionBar actionBar = appCompatActivity.getSupportActionBar();

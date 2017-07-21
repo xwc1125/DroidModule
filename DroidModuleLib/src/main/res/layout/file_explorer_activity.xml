@@ -5,7 +5,6 @@
     android:background="@color/base_gray_bg">
 
     <include
-        android:id="@+id/public_top"
         layout="@layout/public_toolbar" />
 
     <LinearLayout

@@ -10,8 +10,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 
-import com.xwc1125.droidmodule.ToolBar.ToolbarHelper;
-import com.xwc1125.droidutils.handler.WeakHandler;
+import com.xwc1125.droidui.ToolBar.ToolbarHelper;
 
 /**
  * Class: com.xwc1125.yuancy_app.base <br>
@@ -24,7 +23,6 @@ import com.xwc1125.droidutils.handler.WeakHandler;
  */
 public abstract class BaseAppCompatActivity extends AppCompatActivity {
     protected static Activity activity;
-    protected static ToolbarHelper toolbarHelper;
     protected FragmentManager fm;
     protected FragmentTransaction ft;
 
@@ -87,14 +85,6 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity {
     protected abstract void setContentView(Bundle savedInstanceState);
 
     protected abstract void getBundleExtra();
-
-    protected void setToolbarView(int toolbarResId) {
-        toolbarHelper = new ToolbarHelper(activity, toolbarResId);
-        /**
-         * 获取toolbar的组建，然后通过setSupportActionBar方法将组建设置进activity中
-         */
-        setSupportActionBar(toolbarHelper.getToolbar());
-    }
 
     protected abstract void initViews();
 

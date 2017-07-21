@@ -1,26 +1,23 @@
 package com.xwc1125.yuancy_app.webview;
 
 
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.xwc1125.droidapp.R;
-import com.xwc1125.droidui.webview.Html5Linstener;
+import com.xwc1125.droidui.webview.interfaces.Html5Listener;
 import com.xwc1125.droidui.webview.Html5WebView;
 import com.xwc1125.droidmodule.Base.fragment.BaseFragment;
+import com.xwc1125.droidui.webview.interfaces.ImageClickListener;
+import com.xwc1125.droidui.webview.interfaces.TextClickListener;
 import com.xwc1125.droidutils.statubar.StatusBarUtils;
 import com.xwc1125.droidutils.view.FindViewUtils;
 
@@ -70,18 +67,31 @@ public class WebViewFragment extends BaseFragment {
         webView = new Html5WebView(getContext());
         webView.setLayoutParams(params);
         mLayout.addView(webView);
+        webView.setListener(DemoHtml5Linstener);
+        webView.setImageClickListener(new ImageClickListener() {
+            @Override
+            public void onImageClick(String imgUrl, String hasLink) {
+                Toast.makeText(activity, "imgUrl=" + imgUrl + ",hasLink=" + hasLink, Toast.LENGTH_LONG).show();
+            }
+        });
+        webView.setTextClickListener(new TextClickListener() {
+            @Override
+            public void onTextClick(String type, String item_pk) {
+                Toast.makeText(activity, "type=" + type + ",item_pk=" + item_pk, Toast.LENGTH_LONG).show();
+            }
+        });
 
         refreshLayout = FindViewUtils.findViewById(view, R.id.smartLayout);
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
-                webView.loadUrl("http://www.baidu.com", DemoHtml5Linstener);
+                webView.loadUrl("http://www.baidu.com");
             }
         });
         refreshLayout.autoRefresh();
 
         //状态栏透明和间距处理
-        StatusBarUtils.immersive(activity);
+        StatusBarUtils.setTranslucentForImageView(activity, 0, webView);
         StatusBarUtils.setPaddingSmart(activity, webView);
     }
 
@@ -112,7 +122,7 @@ public class WebViewFragment extends BaseFragment {
      * Html5webview的监听
      */
 
-    private static Html5Linstener DemoHtml5Linstener = new Html5Linstener() {
+    private static Html5Listener DemoHtml5Linstener = new Html5Listener() {
         @Override
         public boolean onKeyDown(int keyCode, KeyEvent event) {
             if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -122,68 +132,11 @@ public class WebViewFragment extends BaseFragment {
         }
 
         @Override
-        public void hindProgressBar() {
-            super.hindProgressBar();
+        public void onStopProgress() {
+            super.onStopProgress();
             refreshLayout.finishRefresh();
         }
 
-        @Override
-        public void showWebView() {
-            super.showWebView();
-        }
-
-        @Override
-        public void hindWebView() {
-            super.hindWebView();
-        }
-
-        @Override
-        public void startProgress() {
-            super.startProgress();
-        }
-
-        @Override
-        public void onProgressChanged(int newProgress) {
-            super.onProgressChanged(newProgress);
-        }
-
-        @Override
-        public void fullViewAddView(View view) {
-            super.fullViewAddView(view);
-        }
-
-        @Override
-        public void showVideoFullView() {
-            super.showVideoFullView();
-        }
-
-        @Override
-        public void hindVideoFullView() {
-            super.hindVideoFullView();
-        }
-
-        @Override
-        public void loadingUrl(WebView view, String url) {
-            // 电话、短信、邮箱
-            if (url.startsWith(WebView.SCHEME_TEL) || url.startsWith("sms:") || url.startsWith(WebView.SCHEME_MAILTO)) {
-                try {
-                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                    intent.setData(Uri.parse(url));
-                    activity.startActivity(intent);
-                } catch (ActivityNotFoundException ignored) {
-                }
-            }
-        }
-
-        @Override
-        public void onImageClick(String imgUrl, String hasLink) {
-            Toast.makeText(activity, "imgUrl被点击了：" + imgUrl, Toast.LENGTH_SHORT).show();
-        }
-
-        @Override
-        public void onTextClick(String type, String item_pk) {
-            Toast.makeText(activity, "item_pk被点击了：" + item_pk, Toast.LENGTH_SHORT).show();
-        }
     };
 
     private static boolean goBack() {

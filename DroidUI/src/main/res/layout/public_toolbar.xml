@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:fitsSystemWindows="true">
 
         <android.support.v7.widget.Toolbar
@@ -23,7 +24,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/transparent"
                 android:visibility="gone">
-
+                <!--======left image-->
                 <LinearLayout
                     android:id="@+id/left_layout"
                     android:layout_width="40dp"
@@ -34,7 +35,7 @@
                     android:visibility="gone">
 
                     <ImageView
-                        android:id="@+id/iv_left_back"
+                        android:id="@+id/iv_left_icon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
@@ -44,7 +45,7 @@
                         android:visibility="gone" />
 
                     <ImageView
-                        android:id="@+id/iv_left_back_sub"
+                        android:id="@+id/iv_left_icon_sub"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
@@ -53,7 +54,7 @@
                         android:src="@drawable/icon_back"
                         android:visibility="gone" />
                 </LinearLayout>
-
+                <!--======left hind-->
                 <View
                     android:id="@+id/view_temp"
                     android:layout_width="1dp"
@@ -63,7 +64,7 @@
                     android:layout_toRightOf="@id/left_layout"
                     android:background="@color/base_gray_666"
                     android:visibility="gone" />
-
+                <!--======left text-->
                 <LinearLayout
                     android:id="@+id/left_text_layout"
                     android:layout_width="wrap_content"
@@ -93,7 +94,7 @@
                         android:textColor="#ffffff"
                         android:textSize="@dimen/sp_10" />
                 </LinearLayout>
-
+                <!--======center-->
                 <LinearLayout
                     android:id="@+id/center_layout"
                     android:layout_width="wrap_content"
@@ -105,13 +106,14 @@
                     android:visibility="gone">
 
                     <ProgressBar
-                        android:id="@+id/center_pb"
+                        android:id="@+id/center_progressbar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:visibility="gone" />
 
                     <LinearLayout
+                        android:id="@+id/center_title_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
@@ -141,7 +143,7 @@
                             android:textSize="@dimen/sp_10" />
                     </LinearLayout>
                 </LinearLayout>
-
+                <!--======right-->
                 <LinearLayout
                     android:id="@+id/right_layout"
                     android:layout_width="wrap_content"
@@ -157,6 +159,7 @@
                     android:visibility="gone">
 
                     <LinearLayout
+                        android:id="@+id/right_text_layout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"

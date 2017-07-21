@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_webview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:clipToPadding="false"
+        android:orientation="vertical" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:text="java调用js函数" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button"
+        android:layout_below="@+id/ll_webview">
+
+        <TextView
+            android:id="@+id/msg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="java content" />
+    </ScrollView>
+
+
+</LinearLayout>

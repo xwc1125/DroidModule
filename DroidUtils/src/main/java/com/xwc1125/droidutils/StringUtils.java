@@ -42,7 +42,13 @@ public class StringUtils {
         }
         return false;
     }
-
+    public static Boolean isEmpty(String str) {
+        if (str == null || str.length() == 0 || str.trim().length() == 0
+                || str.equals("null") || str.equals("")) {
+            return true;
+        }
+        return false;
+    }
     /**
      * @param @param  str
      * @param @return

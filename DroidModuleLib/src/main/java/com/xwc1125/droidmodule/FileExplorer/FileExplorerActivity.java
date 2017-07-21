@@ -18,7 +18,7 @@ import com.xwc1125.droidmodule.FileExplorer.utils.FileUtils;
 import com.xwc1125.droidmodule.FileExplorer.adapter.FileExplorerAdapter;
 import com.xwc1125.droidmodule.FileExplorer.utils.MyFileFilter;
 import com.xwc1125.droidmodule.R;
-import com.xwc1125.droidmodule.ToolBar.ToolbarHelper;
+import com.xwc1125.droidui.ToolBar.ToolbarHelper;
 import com.xwc1125.droidui.toast.DroidToast;
 
 import java.io.File;
@@ -32,13 +32,15 @@ import java.io.File;
  * @Copyright: Copyright (c) 2017 <br>
  * @date 2017/6/15  15:28 <br>
  */
-public class FileExplorerActivity extends BaseAppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
+public class FileExplorerActivity extends BaseAppCompatActivity
+        implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
 
-    public static final String BUNDLE_KEY_ISFILE = "bundle_key_isfile";
-    public static final String BUNDLE_KEY_TYPE = "bundle_key_type";
     public static final int REQUEST_CODE = 0x234;
-    public static final String BUNDLE_KEY_FILE_PATH = "bundle_key_file_path";
-    public static final String BUNDLE_KEY_FILE_DIR = "bundle_key_file_dir";
+
+    private static final String BUNDLE_KEY_ISFILE = "bundle_key_isfile";
+    private static final String BUNDLE_KEY_TYPE = "bundle_key_type";
+    private static final String BUNDLE_KEY_FILE_PATH = "bundle_key_file_path";
+    private static final String BUNDLE_KEY_FILE_DIR = "bundle_key_file_dir";
 
     private ListView listView;
     private File[] listFiles;
@@ -63,7 +65,7 @@ public class FileExplorerActivity extends BaseAppCompatActivity implements Adapt
      * @param isFile //查找文件还是文件目录
      * @param type   0:无选择框，1:单选，2:多选
      */
-    public static void openFileExplorerActivity(Activity activity, boolean isFile, int type) {
+    public static void openActivity(Activity activity, boolean isFile, int type) {
         Intent intent = new Intent();
         intent.setClass(activity, FileExplorerActivity.class);
         Bundle bundle = new Bundle();

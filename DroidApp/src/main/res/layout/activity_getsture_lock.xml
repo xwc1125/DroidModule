@@ -1,0 +1,16 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.xwc1125.yuancy_app.gesturelock.view.GestureLockViewGroup
+        android:id="@+id/id_gestureLockViewGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2F2F7"
+        android:gravity="center_vertical"
+        app:count="3"
+        app:tryTimes="3" />
+
+</RelativeLayout>

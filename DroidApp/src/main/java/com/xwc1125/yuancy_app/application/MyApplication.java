@@ -1,5 +1,6 @@
 package com.xwc1125.yuancy_app.application;
 
+import com.xwc1125.droidmodule.DroidApplication;
 import com.yuancy.framework.db.DBApplication;
 
 /**
@@ -11,7 +12,7 @@ import com.yuancy.framework.db.DBApplication;
  * @Copyright: Copyright (c) 2017 <br>
  * @date 2017/6/3  14:41 <br>
  */
-public class MyApplication extends com.xwc1125.droidmodule.MyApplication {
+public class MyApplication extends DroidApplication {
     @Override
     public void onCreate() {
         super.onCreate();

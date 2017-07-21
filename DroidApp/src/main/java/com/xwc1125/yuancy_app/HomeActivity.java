@@ -14,7 +14,10 @@ import android.widget.Toast;
 
 import com.xwc1125.droidapp.R;
 import com.xwc1125.droidmodule.Base.activity.BaseAppCompatActivity;
-import com.xwc1125.droidmodule.ToolBar.ToolbarHelper;
+import com.xwc1125.droidui.ToolBar.ToolbarHelper;
+import com.xwc1125.yuancy_app.gesturelock.GettureLockActivity;
+import com.xwc1125.yuancy_app.javascript.JavascriptFragment;
+import com.xwc1125.yuancy_app.javascript.JavascriptFragment2;
 import com.xwc1125.yuancy_app.material_design.cardview.CardViewFragment;
 import com.xwc1125.yuancy_app.qr.QRFragment;
 import com.xwc1125.yuancy_app.recycler.RecyclerFragment;
@@ -43,7 +46,7 @@ public class HomeActivity extends BaseAppCompatActivity
 
     @Override
     protected void initViews() {
-        toolbarHelper = new ToolbarHelper(activity, R.id.toolbar);
+        ToolbarHelper toolbarHelper = new ToolbarHelper(activity);
         /**
          * 悬浮按钮
          */
@@ -176,7 +179,9 @@ public class HomeActivity extends BaseAppCompatActivity
         } else if (id == R.id.nav_qr) {
             replaceFragment(R.id.content_frame, QRFragment.newInstance("二维码"));
         } else if (id == R.id.nav_send) {
-
+            startActivity(activity,GettureLockActivity.class);
+        }else if (id==R.id.nav_javascript){
+            replaceFragment(R.id.content_frame, JavascriptFragment2.newInstance());
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

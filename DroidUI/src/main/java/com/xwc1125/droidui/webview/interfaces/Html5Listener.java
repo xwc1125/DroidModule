@@ -1,4 +1,4 @@
-package com.xwc1125.droidui.webview;
+package com.xwc1125.droidui.webview.interfaces;
 
 import android.content.Context;
 import android.graphics.Bitmap;

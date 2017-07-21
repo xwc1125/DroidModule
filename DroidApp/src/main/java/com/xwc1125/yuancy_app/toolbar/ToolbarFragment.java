@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import com.xwc1125.droidapp.R;
 import com.xwc1125.droidmodule.Base.fragment.BaseFragment;
-import com.xwc1125.droidmodule.ToolBar.ToolbarHelper;
+import com.xwc1125.droidui.ToolBar.ToolbarHelper;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -76,7 +76,7 @@ public class ToolbarFragment extends BaseFragment {
     @Override
     protected void initView(View view) {
         setHasOptionsMenu(true);
-        toolbarHelper = new ToolbarHelper(activity,R.id.toolbar);
+        ToolbarHelper toolbarHelper = new ToolbarHelper(activity);
         toolbarHelper.getToolbar().inflateMenu(R.menu.menu_toolbar);
         AppCompatActivity appCompatActivity = (AppCompatActivity) activity;
         ActionBar actionBar = appCompatActivity.getSupportActionBar();

@@ -1,23 +1,23 @@
 package com.xwc1125.droidui.webview.core;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Message;
 import android.view.View;
+import android.webkit.ConsoleMessage;
 import android.webkit.GeolocationPermissions;
+import android.webkit.JsPromptResult;
+import android.webkit.JsResult;
+import android.webkit.PermissionRequest;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
-import com.xwc1125.droidui.webview.Html5Linstener;
-
-import static android.app.Activity.RESULT_OK;
+import com.xwc1125.droidui.webview.interfaces.Html5Listener;
 
 /**
- * Class: com.ugchain.wallet.ui.webView <br>
  * Description: TODO <br>
  *
  * @author xwc1125 <br>
@@ -26,64 +26,29 @@ import static android.app.Activity.RESULT_OK;
  * @date 2017/5/27  15:04 <br>
  */
 public class Html5WebChromeClient extends WebChromeClient {
-    private ValueCallback<Uri> mUploadMessage;
-    private ValueCallback<Uri[]> mUploadMessageForAndroid5;
-    public static int FILECHOOSER_RESULTCODE = 1;
-    public static int FILECHOOSER_RESULTCODE_FOR_ANDROID_5 = 2;
-    private Bitmap mDefaultVideoPoster;//视频的默认图
     private Context mContext;
-    private Html5Linstener linstener;
+    private Html5Listener listener;
 
     public Html5WebChromeClient(Context context, WebView webView) {
         this.mContext = context;
     }
 
-    public void setLinstener(Html5Linstener linstener) {
-        this.linstener = linstener;
-    }
-
-    @Override
-    public void onShowCustomView(View view,
-                                 CustomViewCallback callback) {
-        if (linstener != null) {
-            linstener.onShowCustomView(view,
-                    callback);
-        }
-    }
-
-    @Override
-    public void onHideCustomView() {
-        if (linstener != null) {
-            linstener.onHideCustomView();
-        }
-    }
-
-    @Override
-    public Bitmap getDefaultVideoPoster() {
-        if (mDefaultVideoPoster != null) {
-            return mDefaultVideoPoster;
-        } else {
-            return null;
-        }
+    public void setListener(Html5Listener listener) {
+        this.listener = listener;
     }
 
     /**
-     * 设置视频的默认图
+     * 作用：获得网页的加载进度并显示
      *
-     * @param DefaultVideoPoster
+     * @param view
+     * @param newProgress
      */
-    public void setDefaultVideoPoster(Bitmap DefaultVideoPoster) {
-        this.mDefaultVideoPoster = DefaultVideoPoster;
-    }
-
-    // 视频加载时进程loading
-    @SuppressLint("InflateParams")
     @Override
-    public View getVideoLoadingProgressView() {
-        if (linstener != null) {
-            return linstener.setVideoLoadingProgressView(mContext);
+    public void onProgressChanged(WebView view, int newProgress) {
+        super.onProgressChanged(view, newProgress);
+        if (listener != null) {
+            listener.onProgressChanged(newProgress);
         }
-        return null;
     }
 
     /**
@@ -97,24 +62,104 @@ public class Html5WebChromeClient extends WebChromeClient {
     @Override
     public void onReceivedTitle(WebView view, String title) {
         super.onReceivedTitle(view, title);
-        if (linstener != null) {
-            linstener.onReceivedTitle(view, title);
+        if (listener != null) {
+            listener.onReceivedTitle(view, title);
         }
     }
 
-    /**
-     * 作用：获得网页的加载进度并显示
-     *
-     * @param view
-     * @param newProgress
-     */
     @Override
-    public void onProgressChanged(WebView view, int newProgress) {
-        super.onProgressChanged(view, newProgress);
-        if (linstener != null) {
-            linstener.onProgressChanged(newProgress);
+    public void onShowCustomView(View view, int requestedOrientation, CustomViewCallback callback) {
+        super.onShowCustomView(view, requestedOrientation, callback);
+    }
+
+    @Override
+    public void onShowCustomView(View view,
+                                 CustomViewCallback callback) {
+        if (listener != null) {
+            listener.onShowCustomView(view,
+                    callback);
         }
     }
+
+    @Override
+    public void onHideCustomView() {
+        if (listener != null) {
+            listener.onHideCustomView();
+        }
+    }
+
+    @Override
+    public boolean onCreateWindow(WebView view, boolean isDialog, boolean isUserGesture, Message resultMsg) {
+        return super.onCreateWindow(view, isDialog, isUserGesture, resultMsg);
+    }
+
+    @Override
+    public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
+        return super.onJsAlert(view, url, message, result);
+    }
+
+    @Override
+    public boolean onJsBeforeUnload(WebView view, String url, String message, JsResult result) {
+        return super.onJsBeforeUnload(view, url, message, result);
+    }
+
+    @Override
+    public boolean onConsoleMessage(ConsoleMessage consoleMessage) {
+        return super.onConsoleMessage(consoleMessage);
+    }
+
+    @Override
+    public boolean onJsConfirm(WebView view, String url, String message, JsResult result) {
+        return super.onJsConfirm(view, url, message, result);
+    }
+
+    @Override
+    public boolean onJsPrompt(WebView view, String url, String message, String defaultValue, JsPromptResult result) {
+        return super.onJsPrompt(view, url, message, defaultValue, result);
+    }
+
+    @Override
+    public void onGeolocationPermissionsHidePrompt() {
+        super.onGeolocationPermissionsHidePrompt();
+    }
+
+    @Override
+    public void onPermissionRequest(PermissionRequest request) {
+        super.onPermissionRequest(request);
+    }
+
+    @Override
+    public void onPermissionRequestCanceled(PermissionRequest request) {
+        super.onPermissionRequestCanceled(request);
+    }
+
+    /**
+     * 设置视频的默认图
+     *
+     * @return
+     */
+    @Override
+    public Bitmap getDefaultVideoPoster() {
+        if (listener != null) {
+            return listener.onSetDefaultVideoPoster();
+        }
+        return null;
+    }
+
+    /**
+     * 视频加载时进程loading
+     *
+     * @return
+     */
+    @SuppressLint("InflateParams")
+    @Override
+    public View getVideoLoadingProgressView() {
+        if (listener != null) {
+            return listener.onSetVideoLoadingProgressView(mContext);
+        }
+        return null;
+    }
+
 
     @Override
     public void onGeolocationPermissionsShowPrompt(String origin,
@@ -127,94 +172,20 @@ public class Html5WebChromeClient extends WebChromeClient {
         window.onPause();
     }
 
-    //=======================扩展浏览器上传文件===========================
-
     /**
      * 打开文件
-     * 3.0++版本
-     */
-    public void openFileChooser(ValueCallback<Uri> uploadMsg, String acceptType) {
-        openFileChooserImpl(uploadMsg, acceptType);
-    }
-
-    /**
-     * 打开文件
-     * 3.0--版本
-     */
-    public void openImageChooser(ValueCallback<Uri> uploadMsg) {
-        openFileChooserImpl(uploadMsg, "image/*");
-    }
-
-    /**
-     * 打开文件
-     * For Android > 5.0
+     *
+     * @param webView
+     * @param uploadMsg
+     * @param fileChooserParams
+     * @return
      */
     @Override
     public boolean onShowFileChooser(WebView webView, ValueCallback<Uri[]> uploadMsg, FileChooserParams fileChooserParams) {
-        openFileChooserImplForAndroid5(uploadMsg);
+        if (listener != null) {
+            return listener.onOpenFileChooser(webView, uploadMsg, fileChooserParams);
+        }
         return true;
     }
 
-    /**
-     * 图片选择 Android 3.0++
-     *
-     * @param uploadMsg
-     */
-    private void openFileChooserImpl(ValueCallback<Uri> uploadMsg, String acceptType) {
-        mUploadMessage = uploadMsg;
-        Intent i = new Intent(Intent.ACTION_GET_CONTENT);
-        i.addCategory(Intent.CATEGORY_OPENABLE);
-        i.setType(acceptType);
-        if (mContext instanceof Activity) {
-            ((Activity) mContext).startActivityForResult(Intent.createChooser(i, "文件选择"), FILECHOOSER_RESULTCODE);
-        }
-    }
-
-    /**
-     * 图片选择 Android > 5.0
-     *
-     * @param uploadMsg
-     */
-    private void openFileChooserImplForAndroid5(ValueCallback<Uri[]> uploadMsg) {
-        mUploadMessageForAndroid5 = uploadMsg;
-        Intent contentSelectionIntent = new Intent(Intent.ACTION_GET_CONTENT);
-        contentSelectionIntent.addCategory(Intent.CATEGORY_OPENABLE);
-        contentSelectionIntent.setType("image/*");
-
-        Intent chooserIntent = new Intent(Intent.ACTION_CHOOSER);
-        chooserIntent.putExtra(Intent.EXTRA_INTENT, contentSelectionIntent);
-        chooserIntent.putExtra(Intent.EXTRA_TITLE, "图片选择");
-        if (mContext instanceof Activity) {
-            ((Activity) mContext).startActivityForResult(chooserIntent, FILECHOOSER_RESULTCODE_FOR_ANDROID_5);
-        }
-    }
-
-    /**
-     * 5.0以下 上传图片成功后的回调
-     */
-
-    public void mUploadMessage(Intent intent, int resultCode) {
-        if (null == mUploadMessage) {
-            return;
-        }
-        Uri result = intent == null || resultCode != RESULT_OK ? null : intent.getData();
-        mUploadMessage.onReceiveValue(result);
-        mUploadMessage = null;
-    }
-
-    /**
-     * 5.0以上 上传图片成功后的回调
-     */
-    public void mUploadMessageForAndroid5(Intent intent, int resultCode) {
-        if (null == mUploadMessageForAndroid5) {
-            return;
-        }
-        Uri result = (intent == null || resultCode != RESULT_OK) ? null : intent.getData();
-        if (result != null) {
-            mUploadMessageForAndroid5.onReceiveValue(new Uri[]{result});
-        } else {
-            mUploadMessageForAndroid5.onReceiveValue(new Uri[]{});
-        }
-        mUploadMessageForAndroid5 = null;
-    }
 }

@@ -5,6 +5,7 @@ import android.widget.ImageView;
 
 import com.xwc1125.droidmodule.Picture.adapter.CygAdapter;
 import com.xwc1125.droidmodule.Picture.adapter.CygViewHolder;
+import com.xwc1125.droidmodule.Picture.entity.Picture;
 import com.xwc1125.droidmodule.R;
 
 import org.xutils.x;

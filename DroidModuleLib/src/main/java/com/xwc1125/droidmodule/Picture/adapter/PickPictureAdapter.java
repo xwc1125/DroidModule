@@ -1,4 +1,4 @@
-package com.xwc1125.droidmodule.Picture;
+package com.xwc1125.droidmodule.Picture.adapter;
 
 
 import android.content.Context;
@@ -16,7 +16,7 @@ import java.util.List;
  * 照片浏览
  * Created by hupei on 2016/7/7.
  */
-class PickPictureAdapter extends CygAdapter<String> {
+public class PickPictureAdapter extends CygAdapter<String> {
 
     public PickPictureAdapter(Context context, List<String> datas) {
         super(context, R.layout.pick_picture_activity_grid_item, datas);

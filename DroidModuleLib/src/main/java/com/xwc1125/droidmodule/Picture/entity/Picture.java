@@ -1,4 +1,4 @@
-package com.xwc1125.droidmodule.Picture;
+package com.xwc1125.droidmodule.Picture.entity;
 
 /**
  * Created by hupei on 2016/7/7.

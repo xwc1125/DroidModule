@@ -3,14 +3,10 @@ package com.xwc1125.ui.recycler;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.Snackbar;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
@@ -36,7 +32,6 @@ public class MyRecyclerActivity extends BaseAppCompatActivity
         implements DroidItemClickListener, DroidItemLongClickListener {
     private List<Item> itemList;
     private List<Item> nav_itemList;
-//    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     protected void setContentView(Bundle savedInstanceState) {
